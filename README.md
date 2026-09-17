@@ -169,22 +169,3 @@ rustc tools/compute_examples.rs -O -o compute_examples
 The program prints each quantity to full machine precision; the prose rounds
 for display only. Where a value appears in the text, it can be traced to this
 program.
-
-## Citation
-
-```bibtex
-@book{asmr,
-  author    = {The ASMR Project},
-  title     = {Algebraic Security for Monitoring and Response: A Formal Framework for Security Operations},
-  year      = {2026},
-  note      = {Draft edition, version 0.1},
-  url       = {https://github.com/...}
-}
-```
-
-## License
-
-The license for this manuscript is to be confirmed before publication. The
-recommended license for the prose is Creative Commons Attribution 4.0
-(CC BY 4.0); the computation source may be placed under a permissive software
-license. No license is asserted here until the author records one.
