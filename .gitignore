@@ -1,0 +1,4 @@
+# Rust build artifacts for the worked-example computation
+tools/compute_examples
+tools/compute_examples.exe
+tools/compute_examples.pdb
