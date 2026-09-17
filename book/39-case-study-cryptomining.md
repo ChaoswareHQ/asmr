@@ -60,13 +60,13 @@ above the point at which alerting is warranted. The expected cost of blocking
 is
 
 $$
-(1 - 0.822430) \cdot 500 = \$88.79,
+(1 - 0.822430) \cdot 500 = 88.79\ \text{dollars},
 $$
 
 while the expected cost of doing nothing is
 
 $$
-0.822430 \cdot 4{,}000{,}000 = \$3{,}289{,}720.
+0.822430 \cdot 4{,}000{,}000 = 3{,}289{,}720\ \text{dollars}.
 $$
 
 The correct response is **block the offending network egress** — an autonomous

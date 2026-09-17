@@ -14,7 +14,7 @@ actual one. This chapter makes the bounds explicit.
 **Axiom A11 (Resource constraints).** There exist resource constraints
 
 $$
-R(t) \;\le\; C,
+R(t)  \le  C,
 $$
 
 where the resources used up to time t are a vector of per-resource amounts,
@@ -26,7 +26,7 @@ and the capacities are a vector of per-resource limits.
 resource requirement fits within the remaining capacity:
 
 $$
-A_R(s, t) \;=\; \{\, a \in A(s) \mid \mathrm{req}(a) \le C - R(t) \,\}.
+A_R(s, t)  =  \lbrace  a \in A(s) \mid \mathrm{req}(a) \le C - R(t)  \rbrace.
 $$
 
 The action space of Chapter 7 is thus *filtered* by resources before the
@@ -59,7 +59,7 @@ $$
 Since 166.67 is greater than 160, the constraint is violated:
 
 $$
-166.67 > 160 \;\Longrightarrow\; \text{infeasible}.
+166.67 > 160  \Longrightarrow  \text{infeasible}.
 $$
 
 At one minute per alert, the team can review at most

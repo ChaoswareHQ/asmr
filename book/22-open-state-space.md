@@ -16,7 +16,7 @@ matter most. This chapter opens it.
 known and what is not yet known:
 
 $$
-S(t) \;=\; S_{\mathrm{known}}(t) \;\cup\; S_{\mathrm{unknown}}(t).
+S(t)  =  S_{\mathrm{known}}(t)  \cup  S_{\mathrm{unknown}}(t).
 $$
 
 ## 22.3 Operations
@@ -25,14 +25,14 @@ $$
 which new states appear and old states are removed:
 
 $$
-\frac{d\,|S|}{dt} \;=\; \lambda_{\mathrm{new}} - \lambda_{\mathrm{removed}}.
+\frac{d |S|}{dt}  =  \lambda_{\mathrm{new}} - \lambda_{\mathrm{removed}}.
 $$
 
 **Good–Turing estimate.** The probability that the next state is one never seen
 before is estimated by the fraction of states seen exactly once:
 
 $$
-P(s_{\mathrm{new}}) \;=\; \frac{N_1}{N},
+P(s_{\mathrm{new}})  =  \frac{N_1}{N},
 $$
 
 where the number seen once is the number of distinct states observed exactly once and the total observations is the overall number of observations. This is the classical estimator for the mass of unseen

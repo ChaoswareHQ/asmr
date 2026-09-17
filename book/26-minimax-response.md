@@ -15,7 +15,7 @@ fall back to a criterion that does not. That criterion is minimax regret.
 the defender chooses the action minimizing worst-case regret:
 
 $$
-a^{*} \;=\; \arg\min_{a}\ \max_{\theta \in \Theta}\ \mathrm{Regret}(a, \theta).
+a^{*}  =  \arg\min_{a}\ \max_{\theta \in \Theta}\ \mathrm{Regret}(a, \theta).
 $$
 
 ## 26.3 Operations
@@ -24,7 +24,7 @@ $$
 cost minus the cost of the best action for that theta:
 
 $$
-\mathrm{Regret}(a, \theta) \;=\; C(a, \theta) - \min_{a'} C(a', \theta).
+\mathrm{Regret}(a, \theta)  =  C(a, \theta) - \min_{a'} C(a', \theta).
 $$
 
 Regret measures how much worse the defender does than it *could have done* had

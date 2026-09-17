@@ -18,7 +18,7 @@ policy constrains which actions the system may take.
 The autonomy levels form a finite set
 
 $$
-L \;=\; \{\,\texttt{Prohibited},\ \texttt{HumanApproved},\ \texttt{Autonomous}\,\}.
+L  =  \lbrace \texttt{Prohibited},\ \texttt{HumanApproved},\ \texttt{Autonomous} \rbrace.
 $$
 
 ## 13.3 Operations
@@ -27,7 +27,7 @@ $$
 set not prohibited by policy:
 
 $$
-A_D^{\mathrm{gov}} \;=\; \{\, a \in A_D \mid \ell(a) \ne \texttt{Prohibited} \,\}.
+A_D^{\mathrm{gov}}  =  \lbrace  a \in A_D \mid \ell(a) \ne \texttt{Prohibited}  \rbrace.
 $$
 
 **Governed policy.** The defender's policy is constrained to this set:
@@ -40,7 +40,7 @@ $$
 or it is human-approved and a human has approved it:
 
 $$
-\mathrm{Allowed}(a) \;=\; \bigl(\ell(a) = \texttt{Autonomous}\bigr) \;\lor\; \bigl(\ell(a) = \texttt{HumanApproved} \wedge \mathrm{approved}(a)\bigr).
+\mathrm{Allowed}(a)  =  \bigl(\ell(a) = \texttt{Autonomous}\bigr)  \lor  \bigl(\ell(a) = \texttt{HumanApproved} \wedge \mathrm{approved}(a)\bigr).
 $$
 
 ## 13.4 Worked example
@@ -55,11 +55,8 @@ Consider a bank's policy:
 | `delete_data` | Prohibited | Never |
 | `disable_av` | Prohibited | Never |
 
-At a state where a host shows a C2 connection, the governed action set is
-
-$$
-A_D^{\mathrm{gov}} = \{\, \texttt{block\_ip},\ \texttt{alert},\ \texttt{collect\_forensics} \,\}.
-$$
+At a state where a host shows a C2 connection, the governed action set consists
+of `block_ip`, `alert`, and `collect_forensics`.
 
 The actions `isolate_host`, `isolate_dc`, `delete_data`, and `disable_av` are
 excluded — the first two because they require human approval that has not been

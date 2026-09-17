@@ -15,7 +15,7 @@ the availability of a patch is a random variable depending on the vendor, the
 severity, and the complexity of the fix:
 
 $$
-T_{\mathrm{patch}} \;=\; f(\text{vendor}, \text{severity}, \text{complexity}).
+T_{\mathrm{patch}}  =  f(\text{vendor}, \text{severity}, \text{complexity}).
 $$
 
 ## 27.3 Operations

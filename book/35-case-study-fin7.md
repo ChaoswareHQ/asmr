@@ -79,12 +79,12 @@ evaluated. Using the cost table of that chapter:
 
 | Action | Expected cost |
 |---|---|
-| Do nothing | $\approx\$3{,}999{,}952$ |
+| Do nothing | ≈ \$3,999,952 |
 | Alert | \$50 |
-| Block IP | $\approx\$0.006$ |
-| Isolate host | $\approx\$5{,}000$ |
+| Block IP | ≈ \$0.006 |
+| Isolate host | ≈ \$5,000 |
 
-The posterior is far above the block-versus-alert threshold of 0.9$p^{*} = 0.9$
+The posterior is far above the block-versus-alert threshold of $p^{*} = 0.9$
 (Chapter 32), so the optimal action is **block the IP**, autonomously, per the
 governance policy of Chapter 13. The block is cheap when right and cheap when
 wrong at this confidence; isolation is unnecessary because the posterior has

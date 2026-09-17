@@ -22,7 +22,7 @@ applied to the true state. The adversary observes the projection of the false
 state:
 
 $$
-o_A \;=\; \pi_A\bigl(\delta(s)\bigr).
+o_A  =  \pi_A\bigl(\delta(s)\bigr).
 $$
 
 ## 18.3 Operations
@@ -31,14 +31,14 @@ $$
 defender learns and what the adversary learns:
 
 $$
-G_{\mathrm{dec}} \;=\; I(s_{\mathrm{true}}; o_D) - I(s_{\mathrm{true}}; o_A).
+G_{\mathrm{dec}}  =  I(s_{\mathrm{true}}; o_D) - I(s_{\mathrm{true}}; o_A).
 $$
 
 **Attacker confusion.** The adversary's residual uncertainty about the true
 state is
 
 $$
-H_A \;=\; H(s_{\mathrm{true}} \mid o_A).
+H_A  =  H(s_{\mathrm{true}} \mid o_A).
 $$
 
 Deception is effective to the extent that it raises the attacker's confusion — that is, to the

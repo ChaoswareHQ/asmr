@@ -71,11 +71,11 @@ At the posterior after the second command, 0.992204, the optimal response
 under the cost model of Chapter 9 is **isolate the host**. Its expected cost is
 
 $$
-0.992204 \cdot 5{,}000 + 0.007796 \cdot 50{,}000 \approx \$5{,}351,
+0.992204 \cdot 5{,}000 + 0.007796 \cdot 50{,}000 \approx 5{,}351\ \text{dollars},
 $$
 
 which is far below the expected cost of doing nothing at this confidence (on
-the order of 4,000,000 times the posterior$4{,}000{,}000 \cdot p$). Isolation is the correct response because
+the order of $4{,}000{,}000 \cdot p$). Isolation is the correct response because
 the attack's remaining steps — encryption and exfiltration — are blocked by
 cutting the host off from the rest of the environment, which is precisely the
 containment operation of Chapter 31.

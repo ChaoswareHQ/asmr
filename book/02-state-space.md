@@ -14,7 +14,7 @@ make partial knowledge expressible: projection and the fiber.
 **Axiom A1 (State product).** The state space is a product of factor spaces,
 
 $$
-S \;=\; \prod_{i \in I} S_i,
+S  =  \prod_{i \in I} S_i,
 $$
 
 where I is a finite index set of *factors* (the dimensions being monitored)
@@ -24,7 +24,7 @@ assigns one value to each factor.
 The cardinality of the state space is
 
 $$
-|S| \;=\; \prod_{i \in I} |S_i|.
+|S|  =  \prod_{i \in I} |S_i|.
 $$
 
 ## 2.3 Operations
@@ -33,7 +33,7 @@ $$
 coordinates in J:
 
 $$
-\pi_J(s) \;=\; (s_i)_{i \in J}.
+\pi_J(s)  =  (s_i)_{i \in J}.
 $$
 
 Projection is what the defender is able to see.
@@ -42,14 +42,14 @@ Projection is what the defender is able to see.
 with it:
 
 $$
-\pi^{-1}(o) \;=\; \{\, s \in S \mid \pi(s) = o \,\}.
+\pi^{-1}(o)  =  \lbrace  s \in S \mid \pi(s) = o  \rbrace.
 $$
 
 **Gap.** The *gap* is the set of states that projection cannot distinguish from
 some other state:
 
 $$
-\Delta \;=\; \{\, s \in S \mid |\pi^{-1}(\pi(s))| > 1 \,\}.
+\Delta  =  \lbrace  s \in S \mid |\pi^{-1}(\pi(s))| > 1  \rbrace.
 $$
 
 A state is in the gap exactly when there exists a distinct state with the same
@@ -58,54 +58,35 @@ total number of states.
 
 ## 2.4 Worked example
 
-Take four factors with the following value sets:
+Take four factors. Their values and sizes are:
 
-$$
-S_{\mathrm{proc}} = \{\texttt{winword},\ \texttt{powershell},\ \texttt{cmd},\ \texttt{explorer},\ \texttt{unknown}\},\quad |S_{\mathrm{proc}}| = 5,
-$$
+| Factor | Values | Size |
+|--------|--------|------|
+| process | `winword`, `powershell`, `cmd`, `explorer`, `unknown` | 5 |
+| network | `no_conn`, `internal`, `c2_conn`, `ms_cdn`, `unknown` | 5 |
+| file | `no_download`, `doc`, `ps1`, `exe`, `unknown` | 5 |
+| user | `normal`, `privileged`, `service`, `unknown` | 4 |
 
-$$
-S_{\mathrm{net}} = \{\texttt{no\_conn},\ \texttt{internal},\ \texttt{c2\_conn},\ \texttt{ms\_cdn},\ \texttt{unknown}\},\quad |S_{\mathrm{net}}| = 5,
-$$
-
-$$
-S_{\mathrm{file}} = \{\texttt{no\_download},\ \texttt{doc},\ \texttt{ps1},\ \texttt{exe},\ \texttt{unknown}\},\quad |S_{\mathrm{file}}| = 5,
-$$
-
-$$
-S_{\mathrm{user}} = \{\texttt{normal},\ \texttt{privileged},\ \texttt{service},\ \texttt{unknown}\},\quad |S_{\mathrm{user}}| = 4.
-$$
-
-The state space has
+The state space therefore has
 
 $$
 |S| = 5 \cdot 5 \cdot 5 \cdot 4 = 500
 $$
 
-states. A concrete state is
+states. A concrete state names one value per factor; one such state is
+`(powershell, c2_conn, ps1, normal)`. Projecting onto the network factor alone
+yields the observation `c2_conn`. The fiber of that observation pins the
+network factor and leaves the other three factors free, so
 
 $$
-s = (\texttt{powershell},\ \texttt{c2\_conn},\ \texttt{ps1},\ \texttt{normal}).
+5 \cdot 1 \cdot 5 \cdot 4 = 100
 $$
 
-Projecting onto the network factor alone gives
+of the 500 states are consistent with it. The *ambiguity fraction* of a single
+network observation — the proportion of the state space consistent with it — is
 
 $$
-\pi_{\mathrm{net}}(s) = \texttt{c2\_conn}.
-$$
-
-The fiber of that observation pins the network factor and leaves the other
-three free:
-
-$$
-|\pi_{\mathrm{net}}^{-1}(\texttt{c2\_conn})| = 5 \cdot 1 \cdot 5 \cdot 4 = 100.
-$$
-
-The *ambiguity fraction* of a single network observation — the proportion of the
-state space consistent with it — is therefore
-
-$$
-\frac{|\pi_{\mathrm{net}}^{-1}(\texttt{c2\_conn})|}{|S|} = \frac{100}{500} = 0.2.
+\frac{100}{500} = 0.2.
 $$
 
 Because the network factor is the only one observed, *every* state has a fiber

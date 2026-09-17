@@ -23,13 +23,13 @@ measuring how far a state is from the set of known states.
 **Nearest-known distance.** Novelty is the distance to the nearest known state:
 
 $$
-\mathrm{Novel}(s) \;=\; \min_{s' \in S_{\mathrm{known}}} d(s, s').
+\mathrm{Novel}(s)  =  \min_{s' \in S_{\mathrm{known}}} d(s, s').
 $$
 
 **Weighted metric.** The distance is a weighted sum of per-factor mismatches:
 
 $$
-d(s, s') \;=\; \sum_{i \in I} w_i \cdot \delta(s_i, s'_i),
+d(s, s')  =  \sum_{i \in I} w_i \cdot \delta(s_i, s'_i),
 $$
 
 where the mismatch indicator is one when the factors differ and zero otherwise, and the factor weight is the importance of factor i.
@@ -37,22 +37,14 @@ where the mismatch indicator is one when the factors differ and zero otherwise, 
 **Threshold.** A zero-day alert fires when novelty exceeds a threshold:
 
 $$
-\text{Zero-day alert} \;\Longleftrightarrow\; \mathrm{Novel}(s) > \theta_{\mathrm{novel}}.
+\text{Zero-day alert}  \Longleftrightarrow  \mathrm{Novel}(s) > \theta_{\mathrm{novel}}.
 $$
 
 ## 23.4 Worked example
 
-Let the known state be
-
-$$
-s_1 = (\texttt{powershell},\ \texttt{c2\_conn},\ \texttt{ps1},\ \texttt{normal}),
-$$
-
-and suppose a new state appears with an additional, previously unseen factor:
-
-$$
-s_2 = (\texttt{powershell},\ \texttt{c2\_conn},\ \texttt{ps1},\ \texttt{normal},\ \texttt{new\_factor}).
-$$
+Let the known state be `(powershell, c2_conn, ps1, normal)`, and suppose a new
+state appears with one additional, previously unseen factor:
+`(powershell, c2_conn, ps1, normal, new_factor)`.
 
 The novelty of the new state is determined by the distance to the nearest known state.
 Because the new state carries a factor that no known state possesses, its distance to

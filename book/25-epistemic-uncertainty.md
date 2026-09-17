@@ -15,7 +15,7 @@ distinguishes them.
 **Axiom A24 (Epistemic uncertainty).** Total uncertainty decomposes additively,
 
 $$
-\mathrm{Uncertainty} \;=\; \mathrm{Aleatoric} + \mathrm{Epistemic}.
+\mathrm{Uncertainty}  =  \mathrm{Aleatoric} + \mathrm{Epistemic}.
 $$
 
 ## 25.3 Operations
@@ -24,19 +24,19 @@ $$
 models theta:
 
 $$
-H_{\mathrm{aleatoric}} \;=\; \mathbb{E}_{\theta}\bigl[ H(Y \mid X, \theta) \bigr].
+H_{\mathrm{aleatoric}}  =  \mathbb{E}_{\theta}\bigl[ H(Y \mid X, \theta) \bigr].
 $$
 
 **Epistemic uncertainty.** The entropy of the model itself, given the data:
 
 $$
-H_{\mathrm{epistemic}} \;=\; H(\theta \mid X).
+H_{\mathrm{epistemic}}  =  H(\theta \mid X).
 $$
 
 **Total.** The two sum to the full conditional entropy:
 
 $$
-H(Y \mid X) \;=\; H_{\mathrm{aleatoric}} + H_{\mathrm{epistemic}}.
+H(Y \mid X)  =  H_{\mathrm{aleatoric}} + H_{\mathrm{epistemic}}.
 $$
 
 For a zero-day, the signature is

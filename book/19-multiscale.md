@@ -43,14 +43,14 @@ $$
 **Information loss.** Each abstraction step discards information; the loss is
 
 $$
-\Delta_l \;=\; H(S^{(l)}) - H(S^{(l+1)}).
+\Delta_l  =  H(S^{(l)}) - H(S^{(l+1)}).
 $$
 
 **Multi-scale detection.** The posterior over the attack hypothesis combines
 evidence across all scales:
 
 $$
-P(M \mid o^{(1)}, \ldots, o^{(L)}) \;\propto\; P(M) \prod_{l=1}^{L} P(o^{(l)} \mid M).
+P(M \mid o^{(1)}, \ldots, o^{(L)})  \propto  P(M) \prod_{l=1}^{L} P(o^{(l)} \mid M).
 $$
 
 ## 19.4 Worked example

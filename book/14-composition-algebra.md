@@ -21,7 +21,7 @@ $$
 which is associative:
 
 $$
-(s_1 \circ s_2) \circ s_3 \;=\; s_1 \circ (s_2 \circ s_3).
+(s_1 \circ s_2) \circ s_3  =  s_1 \circ (s_2 \circ s_3).
 $$
 
 ## 14.3 Operations
@@ -30,7 +30,7 @@ $$
 boundary's integrity:
 
 $$
-\tau(s_1 \circ s_2) \;=\; \tau(s_1) \odot \tau(s_2) \odot \kappa(b_{12}),
+\tau(s_1 \circ s_2)  =  \tau(s_1) \odot \tau(s_2) \odot \kappa(b_{12}),
 $$
 
 where the multiplication operator is multiplication in the numerical case and
@@ -40,14 +40,14 @@ the boundary integrity is the integrity of the boundary between the two componen
 is
 
 $$
-\mathrm{Reach}(c) \;=\; \{\, s_j \mid \exists\ \text{a path from } c \text{ to } s_j \,\}.
+\mathrm{Reach}(c)  =  \lbrace  s_j \mid \exists\ \text{a path from } c \text{ to } s_j  \rbrace.
 $$
 
 **Blast radius.** The expected impact of a compromise at that component is the
 impact-weighted, trust-weighted sum over the reachable set:
 
 $$
-\mathrm{BR}(c) \;=\; \sum_{s_j \in \mathrm{Reach}(c)} \mathrm{Impact}(s_j) \cdot \tau(s_j).
+\mathrm{BR}(c)  =  \sum_{s_j \in \mathrm{Reach}(c)} \mathrm{Impact}(s_j) \cdot \tau(s_j).
 $$
 
 ## 14.4 Worked example

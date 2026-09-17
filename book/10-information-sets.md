@@ -15,7 +15,7 @@ the sequential update it supports.
 sequence of observations and its own past actions,
 
 $$
-I_t^D \;=\; (o_0, a_0, o_1, a_1, \ldots, o_t),
+I_t^D  =  (o_0, a_0, o_1, a_1, \ldots, o_t),
 $$
 
 and it is *bounded*: it is drawn from a bounded space
@@ -33,7 +33,7 @@ constraint developed in Chapter 12.
 recursively:
 
 $$
-P(s_t \mid I_t^D) \;\propto\; P(o_t \mid s_t)\; P(s_t \mid I_{t-1}^D).
+P(s_t \mid I_t^D)  \propto  P(o_t \mid s_t)  P(s_t \mid I_{t-1}^D).
 $$
 
 Each observation multiplies the prior by the likelihood of that observation;
@@ -43,26 +43,20 @@ compound.
 
 ## 10.4 Worked example
 
-Suppose the defender observes, in order,
+Suppose the defender observes, in order, three intervals with no connection
+followed by three command-and-control connections. Writing `no_conn` for the
+first kind of observation and `c2_conn` for the second, its history is
 
-$$
-\texttt{no\_conn},\ \texttt{no\_conn},\ \texttt{no\_conn},\ \texttt{c2\_conn},\ \texttt{c2\_conn},\ \texttt{c2\_conn},
-$$
-
-so that
-
-$$
-I_5 = (\texttt{no\_conn}, \texttt{no\_conn}, \texttt{no\_conn}, \texttt{c2\_conn}, \texttt{c2\_conn}, \texttt{c2\_conn}).
-$$
+`(no_conn, no_conn, no_conn, c2_conn, c2_conn, c2_conn)`.
 
 Let the likelihoods be
 
 $$
-P(\texttt{no\_conn} \mid M) = 0.1,\quad P(\texttt{c2\_conn} \mid M) = 0.85,
+P(\text{no conn} \mid M) = 0.1,\quad P(\text{c2 conn} \mid M) = 0.85,
 $$
 
 $$
-P(\texttt{no\_conn} \mid \neg M) = 0.98,\quad P(\texttt{c2\_conn} \mid \neg M) = 0.02,
+P(\text{no conn} \mid \neg M) = 0.98,\quad P(\text{c2 conn} \mid \neg M) = 0.02,
 $$
 
 and the base rate of the attack is 0.001. In odds form the prior is
@@ -75,9 +69,9 @@ Each observation multiplies the odds by its likelihood ratio. The likelihood
 ratios are
 
 $$
-\mathrm{LR}(\texttt{no\_conn}) = \frac{0.1}{0.98} = 0.102041,
+\mathrm{LR}(\text{no conn}) = \frac{0.1}{0.98} = 0.102041,
 \qquad
-\mathrm{LR}(\texttt{c2\_conn}) = \frac{0.85}{0.02} = 42.5.
+\mathrm{LR}(\text{c2 conn}) = \frac{0.85}{0.02} = 42.5.
 $$
 
 After three benign observations and three C2 observations, the odds are

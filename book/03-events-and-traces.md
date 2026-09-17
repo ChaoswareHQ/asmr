@@ -18,7 +18,7 @@ changes a small number of factors and leaves the rest unchanged.
 A *trace* is a sequence of states connected by events,
 
 $$
-\sigma \;=\; s_0 \xrightarrow{\,e_1\,} s_1 \xrightarrow{\,e_2\,} s_2 \xrightarrow{\,e_3\,} \cdots ,
+\sigma  =  s_0 \xrightarrow{ e_1 } s_1 \xrightarrow{ e_2 } s_2 \xrightarrow{ e_3 } \cdots ,
 $$
 
 where the state at time t equals the event at step t applied to the previous state.
@@ -28,7 +28,7 @@ where the state at time t equals the event at step t applied to the previous sta
 **Sparsity.** The set of factors changed by an event is
 
 $$
-\Delta(s, s') \;=\; \{\, i \in I \mid s_i \neq s'_i \,\},
+\Delta(s, s')  =  \lbrace  i \in I \mid s_i \neq s'_i  \rbrace,
 $$
 
 and sparsity is the condition that the number of changed factors is much smaller than the total number of factors.
@@ -37,28 +37,28 @@ and sparsity is the condition that the number of changed factors is much smaller
 functional composition of the events applied to the initial state:
 
 $$
-s_t \;=\; e_t\bigl(e_{t-1}\bigl(\cdots e_1(s_0)\cdots\bigr)\bigr).
+s_t  =  e_t\bigl(e_{t-1}\bigl(\cdots e_1(s_0)\cdots\bigr)\bigr).
 $$
 
 **Sequential composition.** The composition of two events is their functional
 composition:
 
 $$
-(e_1\,;\,e_2)(s) \;=\; e_2(e_1(s)).
+(e_1 ; e_2)(s)  =  e_2(e_1(s)).
 $$
 
 **Choice.** The choice of two events is their disjunction, wherever both are
 defined:
 
 $$
-(e_1 + e_2)(s) \;=\; e_1(s) \lor e_2(s).
+(e_1 + e_2)(s)  =  e_1(s) \lor e_2(s).
 $$
 
 **Iteration.** The Kleene iteration of an event is the join of all its finite
 powers:
 
 $$
-e^{*}(s) \;=\; \bigvee_{n=0}^{\infty} e^{n}(s).
+e^{*}(s)  =  \bigvee_{n=0}^{\infty} e^{n}(s).
 $$
 
 **Identity and abort.** The identity event leaves every state fixed — the identity applied to any
@@ -105,7 +105,7 @@ that the number of changed factors is much smaller than the number of factors wh
 The trace itself is the composition
 
 $$
-s_5 = e_5\,;\,e_4\,;\,e_3\,;\,e_2\,;\,e_1\,(s_0).
+s_5 = e_5 ; e_4 ; e_3 ; e_2 ; e_1 (s_0).
 $$
 
 The individual events are unremarkable in isolation. The *sequence* — a

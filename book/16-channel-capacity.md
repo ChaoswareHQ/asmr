@@ -15,7 +15,7 @@ makes the limit precise.
 capacity
 
 $$
-C \;=\; \max_{P(s)} I(S; O),
+C  =  \max_{P(s)} I(S; O),
 $$
 
 the maximum mutual information between state and observation over all input
@@ -27,7 +27,7 @@ distributions.
 is
 
 $$
-I(S; O) \;=\; H(S) - H(S \mid O),
+I(S; O)  =  H(S) - H(S \mid O),
 $$
 
 the entropy of the state minus the entropy remaining after observation.
@@ -36,14 +36,14 @@ the entropy of the state minus the entropy remaining after observation.
 detector:
 
 $$
-P_e \;\ge\; \frac{H(S) - C - 1}{\log_2 |S|}.
+P_e  \ge  \frac{H(S) - C - 1}{\log_2 |S|}.
 $$
 
 **Sample complexity.** To identify the state to within a target error, the
 number of observations must grow at least like
 
 $$
-n \;\gtrsim\; \frac{\log_2 |S|}{\delta^2},
+n  \gtrsim  \frac{\log_2 |S|}{\delta^2},
 $$
 
 where delta is the target accuracy. Fewer observations than this cannot
@@ -65,7 +65,7 @@ a state space of 1024 states, so the entropy of the state is 10 bits, and a chan
 5 bits. Then the entropy of the state given the observation is 5 bits, and
 
 $$
-P_e \;\ge\; \frac{10 - 5 - 1}{10} = 0.4.
+P_e  \ge  \frac{10 - 5 - 1}{10} = 0.4.
 $$
 
 The interpretation is direct. The sensor can distinguish at most 32 states

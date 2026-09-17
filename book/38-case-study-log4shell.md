@@ -57,7 +57,7 @@ $$
 P(M \mid o) = \frac{0.9 \cdot 0.1}{0.9 \cdot 0.1 + 0.01 \cdot 0.9} = \frac{0.09}{0.099} = 0.909091.
 $$
 
-A single such observation drives the posterior past $90\%$ — a consequence of
+A single such observation drives the posterior past 90% — a consequence of
 the strong likelihood ratio ($90 : 1$) rather than of a strong prior.
 
 ## 38.4 Response under no patch

@@ -14,7 +14,7 @@ chapter defines the action space.
 a tuple
 
 $$
-a \;=\; (\mathrm{pre}_a,\ \mathrm{eff}_a,\ C_a,\ \ell_a),
+a  =  (\mathrm{pre}_a,\ \mathrm{eff}_a,\ C_a,\ \ell_a),
 $$
 
 where
@@ -28,7 +28,7 @@ where
 The set of actions applicable at a state is
 
 $$
-A(s) \;=\; \{\, a \in A \mid \mathrm{pre}_a(s) = 1 \,\},
+A(s)  =  \lbrace  a \in A \mid \mathrm{pre}_a(s) = 1  \rbrace,
 $$
 
 and executing an action carries the state to the state produced by its effect.

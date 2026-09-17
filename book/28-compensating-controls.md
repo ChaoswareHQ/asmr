@@ -15,7 +15,7 @@ underlying vulnerability. This chapter formalizes their selection.
 the set of compensating controls is
 
 $$
-\mathrm{Compensate}(v) \;=\; \{\, a \in A \mid \mathrm{reduces}(a, v) \ \wedge\ \neg \mathrm{patch}(v) \,\}.
+\mathrm{Compensate}(v)  =  \lbrace  a \in A \mid \mathrm{reduces}(a, v) \ \wedge\ \neg \mathrm{patch}(v)  \rbrace.
 $$
 
 ## 28.3 Operations
@@ -24,14 +24,14 @@ $$
 risk:
 
 $$
-\mathrm{Eff}(a, v) \;=\; 1 - \frac{\mathrm{Risk}_{\mathrm{after}}(a, v)}{\mathrm{Risk}_{\mathrm{before}}(v)}.
+\mathrm{Eff}(a, v)  =  1 - \frac{\mathrm{Risk}_{\mathrm{after}}(a, v)}{\mathrm{Risk}_{\mathrm{before}}(v)}.
 $$
 
 **Selection.** The defender chooses the control maximizing effectiveness net of
 cost:
 
 $$
-a^{*} \;=\; \arg\max_{a}\ \bigl( \mathrm{Eff}(a, v) - \lambda \cdot C(a) \bigr),
+a^{*}  =  \arg\max_{a}\ \bigl( \mathrm{Eff}(a, v) - \lambda \cdot C(a) \bigr),
 $$
 
 where the cost weight converts cost into the same units as effectiveness.

@@ -14,7 +14,7 @@ to the unknown. This chapter formalizes transfer.
 obtained by transferring beliefs from known, similar attacks:
 
 $$
-P(M_{\mathrm{new}} \mid o) \;=\; \sum_{M_{\mathrm{old}}} P(M_{\mathrm{new}} \mid M_{\mathrm{old}})\; P(M_{\mathrm{old}} \mid o).
+P(M_{\mathrm{new}} \mid o)  =  \sum_{M_{\mathrm{old}}} P(M_{\mathrm{new}} \mid M_{\mathrm{old}})  P(M_{\mathrm{old}} \mid o).
 $$
 
 ## 30.3 Operations
@@ -23,14 +23,14 @@ $$
 feature sets:
 
 $$
-\mathrm{Sim}(M_1, M_2) \;=\; \frac{|F_1 \cap F_2|}{|F_1 \cup F_2|}.
+\mathrm{Sim}(M_1, M_2)  =  \frac{|F_1 \cap F_2|}{|F_1 \cup F_2|}.
 $$
 
 **Transfer.** The prior over a novel attack is a similarity-weighted combination
 of known priors:
 
 $$
-P(M_{\mathrm{new}}) \;=\; \sum_{i} w_i \cdot P(M_i),
+P(M_{\mathrm{new}})  =  \sum_{i} w_i \cdot P(M_i),
 \qquad w_i \propto \mathrm{Sim}(M_{\mathrm{new}}, M_i).
 $$
 
@@ -47,7 +47,7 @@ attacks:
 The transferred prior over the novel attack is
 
 $$
-P(\texttt{GraphQL}) \;=\; 0.7 \cdot P(\texttt{REST}) + 0.3 \cdot P(\texttt{SQLi}).
+P(\texttt{GraphQL})  =  0.7 \cdot P(\texttt{REST}) + 0.3 \cdot P(\texttt{SQLi}).
 $$
 
 The defender does not start from zero for the unknown attack; it starts from a

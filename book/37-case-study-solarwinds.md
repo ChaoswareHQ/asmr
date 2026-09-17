@@ -29,7 +29,7 @@ is exactly what happened across the affected customer base.
 The failure is formalized in Chapter 11. Trust must be paired with integrity:
 
 $$
-\mathrm{Integrity}(s) \;=\; \bigl( \mathrm{hash}(s) = \mathrm{expected\_hash} \bigr),
+\mathrm{Integrity}(s)  =  \bigl( \mathrm{hash}(s) = \text{expected hash} \bigr),
 \qquad
 \tau(s) = 0 \ \text{if the hash differs}.
 $$
@@ -49,7 +49,7 @@ across that boundary weighted by the boundary's integrity. In the notation of
 Chapter 14,
 
 $$
-\tau(\texttt{vendor} \circ \texttt{customer}) \;=\; \tau(\texttt{vendor}) \odot \tau(\texttt{customer}) \odot \kappa(\texttt{update channel}).
+\tau(\texttt{vendor} \circ \texttt{customer})  =  \tau(\texttt{vendor}) \odot \tau(\texttt{customer}) \odot \kappa(\texttt{update channel}).
 $$
 
 The update channel — the boundary — was assumed to have integrity

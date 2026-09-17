@@ -18,19 +18,19 @@ between probabilistic and robust (set-based) modeling of uncertainty.
 **Bayes' rule.** For the hypothesis that an attack is present, and an observation,
 
 $$
-P(M \mid o) \;=\; \frac{P(o \mid M)\, P(M)}{P(o)}.
+P(M \mid o)  =  \frac{P(o \mid M)  P(M)}{P(o)}.
 $$
 
 **Expectation.** For a random quantity X,
 
 $$
-\mathbb{E}[X] \;=\; \int_{\Omega} X \, dP.
+\mathbb{E}[X]  =  \int_{\Omega} X   dP.
 $$
 
 **Robust decision.** When the model is only known to lie in the uncertainty set,
 
 $$
-a^{*} \;=\; \arg\min_{a} \max_{\omega \in \Omega} C(a, \omega),
+a^{*}  =  \arg\min_{a} \max_{\omega \in \Omega} C(a, \omega),
 $$
 
 which is the minimax criterion over the uncertainty set.
@@ -38,7 +38,7 @@ which is the minimax criterion over the uncertainty set.
 **Kullback–Leibler divergence.** For two distributions P and Q,
 
 $$
-D_{\mathrm{KL}}(P \parallel Q) \;=\; \sum_{x} P(x) \log \frac{P(x)}{Q(x)}.
+D_{\mathrm{KL}}(P \parallel Q)  =  \sum_{x} P(x) \log \frac{P(x)}{Q(x)}.
 $$
 
 The KL divergence reappears in Chapter 15, where it measures how far an

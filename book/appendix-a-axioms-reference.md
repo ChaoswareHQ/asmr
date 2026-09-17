@@ -11,10 +11,10 @@ precede it.
 **A1 (State product).**
 $S = \prod_{i \in I} S_i$, with projection $\pi_J : S \to \prod_{i \in J} S_i$,
 fiber $\pi^{-1}(o)$, and gap
-$\Delta = \{\, s \mid |\pi^{-1}(\pi(s))| > 1 \,\}$.
+$\Delta = \lbrace  s \mid |\pi^{-1}(\pi(s))| > 1  \rbrace$.
 
 **A2 (Event transition).** An event is a sparse partial function
-$e : S \to S$; traces compose under $(\,;\,)$, $+$, and $*$, with identity
+$e : S \to S$; traces compose under $( ; )$, $+$, and $*$, with identity
 $\mathrm{id}$ and abort $0$.
 
 **A3 (Observation projection).**
@@ -35,11 +35,11 @@ with policies $\mu_D, \mu_A$ over information sets, forming a partially
 observable stochastic game.
 
 **A8 (Cost–utility model).** Each action has costs $C_M(a), C_{\neg M}(a)$;
-expected cost is $p\, C_M + (1-p)\, C_{\neg M}$.
+expected cost is $p  C_M + (1-p)  C_{\neg M}$.
 
 **A9 (Information sets).**
 $I_t^D = (o_0, a_0, \ldots, o_t)$, with recursive update
-$P(s_t \mid I_t^D) \propto P(o_t \mid s_t)\, P(s_t \mid I_{t-1}^D)$.
+$P(s_t \mid I_t^D) \propto P(o_t \mid s_t)  P(s_t \mid I_{t-1}^D)$.
 
 **A10 (Trust and integrity).** Observations carry trust $\tau \in T$, with
 propagation $\tau(s_1 \circ s_2) = \tau(s_1) \odot \tau(s_2) \odot \kappa(b_{12})$
@@ -47,10 +47,10 @@ and trust-weighted likelihood
 $P(o \mid s, \tau) = \tau P_{\mathrm{honest}} + (1-\tau) P_{\mathrm{adversarial}}$.
 
 **A11 (Resource constraints).** $R(t) \le C$, with resource-aware action set
-$A_R(s, t) = \{\, a \in A(s) \mid \mathrm{req}(a) \le C - R(t) \,\}$.
+$A_R(s, t) = \lbrace  a \in A(s) \mid \mathrm{req}(a) \le C - R(t)  \rbrace$.
 
 **A12 (Governance and policy).** Autonomy levels
-$L = \{\texttt{Prohibited}, \texttt{HumanApproved}, \texttt{Autonomous}\}$,
+$L = \lbrace\texttt{Prohibited}, \texttt{HumanApproved}, \texttt{Autonomous}\rbrace$,
 governed action space $A_D^{\mathrm{gov}}$, and
 $\mathrm{Allowed}(a)$.
 
@@ -58,7 +58,7 @@ $\mathrm{Allowed}(a)$.
 
 **A13 (Composition algebra).** An associative composition
 $\circ : S_i \times S_j \to S_{i \cup j}$, reachability $\mathrm{Reach}(c)$, and
-blast radius $\mathrm{BR}(c) = \sum \mathrm{Impact}(s_j)\, \tau(s_j)$.
+blast radius $\mathrm{BR}(c) = \sum \mathrm{Impact}(s_j)  \tau(s_j)$.
 
 **A14 (Adversarial adaptation).**
 $\mu_A^{t+1} = L_A(\mu_A^t, I_t^A, r_t^A)$, with drift measured by
@@ -97,7 +97,7 @@ with Good–Turing estimate $P(s_{\mathrm{new}}) = N_1 / N$.
 $\mathrm{Novel}(s) = \min_{s' \in S_{\mathrm{known}}} d(s, s')$.
 
 **A23 (Structural anomaly).**
-$\mathrm{Anomaly}(s) = \alpha\, \mathrm{ValueAnomaly}(s) + \beta\, \mathrm{StructureAnomaly}(s)$.
+$\mathrm{Anomaly}(s) = \alpha  \mathrm{ValueAnomaly}(s) + \beta  \mathrm{StructureAnomaly}(s)$.
 
 **A24 (Epistemic uncertainty).**
 $H(Y \mid X) = H_{\mathrm{aleatoric}} + H_{\mathrm{epistemic}}$.
@@ -109,13 +109,13 @@ $a^{*} = \arg\min_a \max_\theta \mathrm{Regret}(a, \theta)$.
 with $T_{\mathrm{patch}} = \infty$ for a zero-day.
 
 **A27 (Compensating controls).**
-$\mathrm{Compensate}(v) = \{\, a \mid \mathrm{reduces}(a, v) \wedge \neg \mathrm{patch}(v) \,\}$.
+$\mathrm{Compensate}(v) = \lbrace  a \mid \mathrm{reduces}(a, v) \wedge \neg \mathrm{patch}(v)  \rbrace$.
 
 **A28 (Zero-day hunting).**
-$\mathrm{Hunt}(h) = \{\, e \mid \mathrm{StructureAnomaly}(e) > \theta \,\}$.
+$\mathrm{Hunt}(h) = \lbrace  e \mid \mathrm{StructureAnomaly}(e) > \theta  \rbrace$.
 
 **A29 (Transfer learning).**
-$P(M_{\mathrm{new}} \mid o) = \sum_{M_{\mathrm{old}}} P(M_{\mathrm{new}} \mid M_{\mathrm{old}})\, P(M_{\mathrm{old}} \mid o)$.
+$P(M_{\mathrm{new}} \mid o) = \sum_{M_{\mathrm{old}}} P(M_{\mathrm{new}} \mid M_{\mathrm{old}})  P(M_{\mathrm{old}} \mid o)$.
 
 **A30 (Freeze and isolate).** Freeze operator $\mathrm{Freeze}(s) = s_{\mathrm{frozen}}$
 with $\mathrm{eff}_a = \mathrm{id}$, isolation operator

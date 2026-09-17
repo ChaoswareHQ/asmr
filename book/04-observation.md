@@ -15,7 +15,7 @@ the error of any detector fed by a limited channel.
 noisy projection of the state,
 
 $$
-o_t \;=\; \eta_t\bigl(\pi(s_t),\, \theta_t\bigr),
+o_t  =  \eta_t\bigl(\pi(s_t),  \theta_t\bigr),
 $$
 
 where
@@ -29,7 +29,7 @@ where
 The projection determines the fiber of an observation,
 
 $$
-\pi^{-1}(o) \;=\; \{\, s \in S \mid \pi(s) = o \,\},
+\pi^{-1}(o)  =  \lbrace  s \in S \mid \pi(s) = o  \rbrace,
 $$
 
 the set of states consistent with the observation.
@@ -49,7 +49,7 @@ between state and observation, and the number of states. Then the error
 probability of any detector satisfies
 
 $$
-P_e \;\ge\; \frac{H(S) - C - 1}{\log_2 |S|}.
+P_e  \ge  \frac{H(S) - C - 1}{\log_2 |S|}.
 $$
 
 This is Fano's inequality applied to the observation channel. It states that
@@ -59,33 +59,19 @@ ambiguity remains and must appear as error somewhere.
 
 ## 4.4 Worked example
 
-Let the full state be
+The full state is `(powershell, c2_conn, ps1, normal)`. A firewall observes
+only the network factor, so it sees the single value `c2_conn`. If the sensor
+drops the packet, the noise term maps that value to `no_conn` before it reaches
+the defender. The fiber of the uncorrupted observation pins the network factor
+and leaves the other three factors free, so it has size
 
 $$
-s = (\texttt{powershell},\ \texttt{c2\_conn},\ \texttt{ps1},\ \texttt{normal}).
+5 \cdot 1 \cdot 5 \cdot 4 = 100,
 $$
 
-A firewall observes only the network factor, so
-
-$$
-\pi_{\mathrm{net}}(s) = \texttt{c2\_conn}.
-$$
-
-If the sensor drops the packet, the noise term acts:
-
-$$
-\eta(\texttt{c2\_conn}) = \texttt{no\_conn}.
-$$
-
-The fiber of the uncorrupted observation has size
-
-$$
-|\pi_{\mathrm{net}}^{-1}(\texttt{c2\_conn})| = 5 \cdot 1 \cdot 5 \cdot 4 = 100,
-$$
-
-as computed in Chapter 2. A rule that asks "is the process
-`malicious_ps`?" cannot fire at all, because the network projection does
-not observe the process factor. This is the coverage bound.
+as computed in Chapter 2. A rule that asks "is the process `malicious_ps`?"
+cannot fire at all, because the network projection does not observe the process
+factor. This is the coverage bound.
 
 For the Fano bound, take a canonical, internally consistent instance. Let the
 state be uniform over 1024 states (2 to the 10th power), so that the entropy of the state is 10 bits.
@@ -93,7 +79,7 @@ Suppose the observation channel conveys 5 bits of mutual information between sta
 so that the residual entropy, the entropy of the state given the observation, is 5 bits. Then
 
 $$
-P_e \;\ge\; \frac{10 - 5 - 1}{10} = \frac{4}{10} = 0.4.
+P_e  \ge  \frac{10 - 5 - 1}{10} = \frac{4}{10} = 0.4.
 $$
 
 A sensor that conveys half the state's entropy leaves a residual of five bits,

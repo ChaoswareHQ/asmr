@@ -32,14 +32,14 @@ $$
 The fundamental property is that causality is decided componentwise:
 
 $$
-e_1 \prec e_2 \;\Longleftrightarrow\; VC(e_1) < VC(e_2),
+e_1 \prec e_2  \Longleftrightarrow  VC(e_1) < VC(e_2),
 $$
 
 where the less-than relation is the componentwise strict order with strictness in at least one
 coordinate. Concurrency is the negation of both directions:
 
 $$
-e_1 \parallel e_2 \;\Longleftrightarrow\; \neg(e_1 \prec e_2) \wedge \neg(e_2 \prec e_1).
+e_1 \parallel e_2  \Longleftrightarrow  \neg(e_1 \prec e_2) \wedge \neg(e_2 \prec e_1).
 $$
 
 Vector clocks are the correct data structure for correlating events across

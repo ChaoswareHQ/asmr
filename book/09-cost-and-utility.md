@@ -20,20 +20,20 @@ defender.
 **Expected cost.** Given a posterior probability of attack p, the expected cost of an action is
 
 $$
-\mathbb{E}[C(a)] \;=\; p \cdot C_M(a) + (1 - p) \cdot C_{\neg M}(a).
+\mathbb{E}[C(a)]  =  p \cdot C_M(a) + (1 - p) \cdot C_{\neg M}(a).
 $$
 
 **Optimal action.** The optimal action minimizes expected cost:
 
 $$
-a^{*} \;=\; \arg\min_{a} \mathbb{E}[C(a)].
+a^{*}  =  \arg\min_{a} \mathbb{E}[C(a)].
 $$
 
 **Threshold.** For two actions, the probability at which they are
 equally costly is
 
 $$
-p^{*} \;=\; \frac{C_{\neg M}(a) - C_{\neg M}(a')}{C_{\neg M}(a) - C_{\neg M}(a') + C_M(a') - C_M(a)}.
+p^{*}  =  \frac{C_{\neg M}(a) - C_{\neg M}(a')}{C_{\neg M}(a) - C_{\neg M}(a') + C_M(a') - C_M(a)}.
 $$
 
 Below the threshold one action is cheaper; above it, the other. The threshold is

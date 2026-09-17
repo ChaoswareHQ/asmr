@@ -41,7 +41,7 @@ $$
 reachable path to the rest:
 
 $$
-\mathrm{Contain}(c) \;=\; \{\, s \mid \mathrm{Reach}(c) \cap s = \varnothing \,\}.
+\mathrm{Contain}(c)  =  \lbrace  s \mid \mathrm{Reach}(c) \cap s = \varnothing  \rbrace.
 $$
 
 ## 31.4 Worked example

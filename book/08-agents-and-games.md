@@ -26,7 +26,7 @@ observable stochastic game.
 the discounted game:
 
 $$
-\mu_D^{*} \;=\; \arg\max_{\mu_D}\ \min_{\mu_A}\ \mathbb{E}\!\left[\sum_{t=0}^{\infty} \gamma^{t}\, U_D \right].
+\mu_D^{*}  =  \arg\max_{\mu_D}\ \min_{\mu_A}\ \mathbb{E}\left[\sum_{t=0}^{\infty} \gamma^{t}  U_D \right].
 $$
 
 The defender maximizes the worst case over the attacker, because the attacker
@@ -36,14 +36,14 @@ is an optimizing adversary, not a stationary noise source.
 side is a best response to the other:
 
 $$
-\mathrm{Nash}(\mu_D, \mu_A) \;\Longleftrightarrow\; \mu_D = \mathrm{BR}(\mu_A) \ \wedge\ \mu_A = \mathrm{BR}(\mu_D).
+\mathrm{Nash}(\mu_D, \mu_A)  \Longleftrightarrow  \mu_D = \mathrm{BR}(\mu_A) \ \wedge\ \mu_A = \mathrm{BR}(\mu_D).
 $$
 
 **Stackelberg equilibrium.** When the defender commits first and the attacker
 responds, the defender solves
 
 $$
-\mathrm{SE}(\mu_D) \;=\; \arg\max_{\mu_D}\ \min_{\mu_A}\ \mathbb{E}[U_D \mid \mu_D, \mu_A].
+\mathrm{SE}(\mu_D)  =  \arg\max_{\mu_D}\ \min_{\mu_A}\ \mathbb{E}[U_D \mid \mu_D, \mu_A].
 $$
 
 ## 8.4 Worked example

@@ -14,7 +14,7 @@ current, and will be misled. This chapter formalizes decay.
 **Axiom A16 (Temporal decay).** Evidence decays exponentially in age:
 
 $$
-w(t, t') \;=\; e^{-\lambda (t - t')},
+w(t, t')  =  e^{-\lambda (t - t')},
 $$
 
 where the decay rate is positive and the age of the evidence is time t minus time t'.
@@ -24,14 +24,14 @@ where the decay rate is positive and the age of the evidence is time t minus tim
 **Half-life.** The time at which evidence loses half its weight is
 
 $$
-t_{1/2} \;=\; \frac{\ln 2}{\lambda}.
+t_{1/2}  =  \frac{\ln 2}{\lambda}.
 $$
 
 **Weighted posterior.** The posterior weights each observation by its decayed
 relevance:
 
 $$
-P(M \mid o_{\le t}) \;\propto\; P(M) \prod_{t'=0}^{t} P(o_{t'} \mid M)^{\,w(t, t')}.
+P(M \mid o_{\le t})  \propto  P(M) \prod_{t'=0}^{t} P(o_{t'} \mid M)^{ w(t, t')}.
 $$
 
 An observation older than several half-lives contributes essentially nothing;

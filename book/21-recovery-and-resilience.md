@@ -24,26 +24,26 @@ that carries a compromised state to a restored state.
 **Recovery time.** The time at which trust is fully restored is
 
 $$
-T_{\mathrm{rec}} \;=\; \inf \{\, t \mid \tau(s_t) = \tau_{\max} \,\}.
+T_{\mathrm{rec}}  =  \inf \lbrace  t \mid \tau(s_t) = \tau_{\max}  \rbrace.
 $$
 
 **Resilience.** The resilience of a state is the normalized integral of trust
 over the recovery trajectory:
 
 $$
-\mathrm{Res}(s) \;=\; \frac{\int_{0}^{\infty} \tau(s_t)\, dt}{\tau_{\max} \cdot T_{\mathrm{rec}}}.
+\mathrm{Res}(s)  =  \frac{\int_{0}^{\infty} \tau(s_t)  dt}{\tau_{\max} \cdot T_{\mathrm{rec}}}.
 $$
 
 **Mean time to recovery.** The expected recovery time is
 
 $$
-\mathrm{MTTR} \;=\; \mathbb{E}[T_{\mathrm{rec}}].
+\mathrm{MTTR}  =  \mathbb{E}[T_{\mathrm{rec}}].
 $$
 
 **Availability.** Availability is the fraction of time the system is functional:
 
 $$
-A \;=\; \frac{\mathrm{MTBF}}{\mathrm{MTBF} + \mathrm{MTTR}},
+A  =  \frac{\mathrm{MTBF}}{\mathrm{MTBF} + \mathrm{MTTR}},
 $$
 
 where $\mathrm{MTBF}$ is the mean time between failures.
@@ -66,7 +66,7 @@ $$
 A = \frac{1000}{1000 + 10} = \frac{1000}{1010} = 0.990099.
 $$
 
-The system is available roughly $99\%$ of the time, unavailable roughly $1\%$.
+The system is available roughly 99% of the time, unavailable roughly 1%.
 The formula makes the tradeoff explicit: reducing MTTR from $10$ to $1$ hour
 raises availability from $0.9901$ to $0.9990$ — a gain of nearly an order of
 magnitude in downtime — which is the quantitative argument for investing in

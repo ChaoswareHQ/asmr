@@ -14,7 +14,7 @@ search proactively, guided by hypotheses. This chapter formalizes the hunt.
 structural anomaly exceeds a threshold:
 
 $$
-\mathrm{Hunt}(h) \;=\; \{\, e \mid \mathrm{StructureAnomaly}(e) > \theta \,\},
+\mathrm{Hunt}(h)  =  \lbrace  e \mid \mathrm{StructureAnomaly}(e) > \theta  \rbrace,
 $$
 
 driven by a hypothesis.
@@ -25,14 +25,14 @@ driven by a hypothesis.
 can imagine:
 
 $$
-H \;=\; \{\,\text{new TTPs},\ \text{new tools},\ \text{new infrastructure}\,\}.
+H  =  \lbrace \text{new TTPs},\ \text{new tools},\ \text{new infrastructure} \rbrace.
 $$
 
 **Search.** Given a hypothesis, the defender searches for the events most
 likely under it:
 
 $$
-\mathrm{Hunt}(h) \;=\; \arg\max_{e}\ P(e \mid h).
+\mathrm{Hunt}(h)  =  \arg\max_{e}\ P(e \mid h).
 $$
 
 ## 29.4 Worked example

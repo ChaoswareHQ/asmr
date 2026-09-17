@@ -20,7 +20,7 @@ composition and is used to weight likelihoods.
 **Trust propagation.** When two sources are composed across a boundary, their combined trust is
 
 $$
-\tau(s_1 \circ s_2) \;=\; \tau(s_1) \odot \tau(s_2) \odot \kappa(b_{12}),
+\tau(s_1 \circ s_2)  =  \tau(s_1) \odot \tau(s_2) \odot \kappa(b_{12}),
 $$
 
 where the meet operation is the lattice meet (combining evidence
@@ -31,7 +31,7 @@ between them.
 likelihood
 
 $$
-P(o \mid s, \tau) \;=\; \tau \cdot P_{\mathrm{honest}}(o \mid s) + (1 - \tau) \cdot P_{\mathrm{adversarial}}(o \mid s).
+P(o \mid s, \tau)  =  \tau \cdot P_{\mathrm{honest}}(o \mid s) + (1 - \tau) \cdot P_{\mathrm{adversarial}}(o \mid s).
 $$
 
 With probability equal to the trust the report comes from an honest source;
@@ -41,7 +41,7 @@ adversary.
 **Trust threshold.** An action is permitted only if trust is sufficient:
 
 $$
-\mathrm{Allowed}(a) \;\Longleftrightarrow\; \tau(a) \ge \tau_{\min}(a).
+\mathrm{Allowed}(a)  \Longleftrightarrow  \tau(a) \ge \tau_{\min}(a).
 $$
 
 ## 11.4 Worked example
@@ -98,7 +98,7 @@ conclusion is that trust must be paired with integrity: a cryptographic check
 that the content is what it claims to be,
 
 $$
-\mathrm{Integrity}(s) \;=\; \bigl(\mathrm{hash}(s) = \mathrm{expected\_hash}\bigr).
+\mathrm{Integrity}(s)  =  \bigl(\mathrm{hash}(s) = \text{expected hash}\bigr).
 $$
 
 If the hash differs, trust is set to zero regardless of the reputation of the

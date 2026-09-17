@@ -24,7 +24,7 @@ grouped by the part of the framework they belong to.
 | $e : S \to S$ | An event |
 | $\sigma$ | A trace |
 | $\Delta(s, s')$ | Set of factors changed between $s$ and $s'$ |
-| $e_1 \,;\, e_2$ | Sequential composition |
+| $e_1  ;  e_2$ | Sequential composition |
 | $e_1 + e_2$ | Choice |
 | $e^{*}$ | Iteration |
 | $\mathrm{id}$ | Identity event |

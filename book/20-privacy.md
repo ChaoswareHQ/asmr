@@ -25,7 +25,7 @@ that maps the monitored state to a minimized, anonymized form.
 **Differential privacy.** For two adjacent states and any set of outputs,
 
 $$
-P\bigl(\Pi(s) \in R\bigr) \;\le\; e^{\epsilon}\, P\bigl(\Pi(s') \in R\bigr) + \delta.
+P\bigl(\Pi(s) \in R\bigr)  \le  e^{\epsilon}  P\bigl(\Pi(s') \in R\bigr) + \delta.
 $$
 
 The parameter epsilon bounds how much the output can reveal about any single
@@ -34,13 +34,13 @@ individual's data.
 **Privacy budget.** The total budget is the sum over releases:
 
 $$
-\epsilon_{\mathrm{total}} \;=\; \sum_{i=1}^{n} \epsilon_i.
+\epsilon_{\mathrm{total}}  =  \sum_{i=1}^{n} \epsilon_i.
 $$
 
 **Utility loss.** Anonymization discards information; the loss is
 
 $$
-L_{\mathrm{util}} \;=\; H(S) - H(S_{\mathrm{safe}}).
+L_{\mathrm{util}}  =  H(S) - H(S_{\mathrm{safe}}).
 $$
 
 **Tradeoff.** The defender minimizes a weighted combination of utility loss and

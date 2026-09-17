@@ -15,7 +15,7 @@ as well as value.
 and a structure component:
 
 $$
-\mathrm{Anomaly}(s) \;=\; \alpha \cdot \mathrm{ValueAnomaly}(s) + \beta \cdot \mathrm{StructureAnomaly}(s).
+\mathrm{Anomaly}(s)  =  \alpha \cdot \mathrm{ValueAnomaly}(s) + \beta \cdot \mathrm{StructureAnomaly}(s).
 $$
 
 ## 24.3 Operations
@@ -23,14 +23,14 @@ $$
 **Value anomaly.** The negative log-probability of the state:
 
 $$
-\mathrm{ValueAnomaly}(s) \;=\; -\log P(s).
+\mathrm{ValueAnomaly}(s)  =  -\log P(s).
 $$
 
 **Structure anomaly.** The negative log-probability of the state's relationship
 graph:
 
 $$
-\mathrm{StructureAnomaly}(s) \;=\; -\log P(G_s),
+\mathrm{StructureAnomaly}(s)  =  -\log P(G_s),
 $$
 
 where the relationship graph of the state is the graph induced by the state (processes as vertices, edges as
@@ -40,7 +40,7 @@ spawns, connections, and file writes).
 minimum number of edits to transform one into the other:
 
 $$
-d_{\mathrm{graph}}(G_1, G_2) \;=\; \min_{\mathrm{edit}} |\mathrm{edit}|.
+d_{\mathrm{graph}}(G_1, G_2)  =  \min_{\mathrm{edit}} |\mathrm{edit}|.
 $$
 
 ## 24.4 Worked example

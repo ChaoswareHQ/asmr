@@ -19,7 +19,7 @@ provisional.
 the same projection:
 
 $$
-s \in \Delta \;\Longleftrightarrow\; \exists\, s' \ne s : \pi(s') = \pi(s).
+s \in \Delta  \Longleftrightarrow  \exists  s' \ne s : \pi(s') = \pi(s).
 $$
 
 **Proof.** The definition of the gap is
@@ -47,7 +47,7 @@ repeatedly in the capacity analysis of Chapters 4 and 16.
 their expected costs are equal is
 
 $$
-p^{*} \;=\; \frac{C_{\neg M}(a') - C_{\neg M}(a)}{\bigl(C_M(a) - C_M(a')\bigr) + \bigl(C_{\neg M}(a') - C_{\neg M}(a)\bigr)}.
+p^{*}  =  \frac{C_{\neg M}(a') - C_{\neg M}(a)}{\bigl(C_M(a) - C_M(a')\bigr) + \bigl(C_{\neg M}(a') - C_{\neg M}(a)\bigr)}.
 $$
 
 Below the threshold one action is cheaper; above it, the other.
@@ -55,24 +55,24 @@ Below the threshold one action is cheaper; above it, the other.
 **Proof.** The expected costs are
 
 $$
-\mathbb{E}[C(a)] = p\, C_M(a) + (1-p)\, C_{\neg M}(a),
+\mathbb{E}[C(a)] = p  C_M(a) + (1-p)  C_{\neg M}(a),
 \qquad
-\mathbb{E}[C(a')] = p\, C_M(a') + (1-p)\, C_{\neg M}(a').
+\mathbb{E}[C(a')] = p  C_M(a') + (1-p)  C_{\neg M}(a').
 $$
 
 Setting them equal and expanding,
 
 $$
-p\, C_M(a) + C_{\neg M}(a) - p\, C_{\neg M}(a)
-\;=\;
-p\, C_M(a') + C_{\neg M}(a') - p\, C_{\neg M}(a').
+p  C_M(a) + C_{\neg M}(a) - p  C_{\neg M}(a)
+ = 
+p  C_M(a') + C_{\neg M}(a') - p  C_{\neg M}(a').
 $$
 
 Collecting the terms in $p$ on one side and the constants on the other,
 
 $$
 p\Bigl[ C_M(a) - C_{\neg M}(a) - C_M(a') + C_{\neg M}(a') \Bigr]
-\;=\;
+ = 
 C_{\neg M}(a') - C_{\neg M}(a).
 $$
 
@@ -102,7 +102,7 @@ observation source raises the floor on detection error.
 likelihood with a mixture
 
 $$
-P(o \mid s, \tau) = \tau\, P_{\mathrm{honest}}(o \mid s) + (1-\tau)\, P_{\mathrm{adversarial}}(o \mid s).
+P(o \mid s, \tau) = \tau  P_{\mathrm{honest}}(o \mid s) + (1-\tau)  P_{\mathrm{adversarial}}(o \mid s).
 $$
 
 As trust approaches one this converges to the honest channel; as trust decreases, the
@@ -111,14 +111,14 @@ is nondecreasing in trust. Substituting
 the effective capacity into the Fano bound of Chapter 16,
 
 $$
-P_e \;\ge\; \frac{H(S) - C_{\mathrm{eff}}(\tau) - 1}{\log_2 |S|},
+P_e  \ge  \frac{H(S) - C_{\mathrm{eff}}(\tau) - 1}{\log_2 |S|},
 $$
 
 the error floor rises as trust falls. A convenient first-order approximation
 is
 
 $$
-P_e \;\ge\; \frac{H(S) - C - 1}{\log_2 |S|} + \frac{1 - \tau}{2},
+P_e  \ge  \frac{H(S) - C - 1}{\log_2 |S|} + \frac{1 - \tau}{2},
 $$
 
 which captures the qualitative effect in a closed form. The essential claim —
@@ -139,7 +139,7 @@ stochastic game of Chapter 8 is the maximin solution of the discounted
 objective:
 
 $$
-\mu_D^{*} \;=\; \arg\max_{\mu_D}\ \min_{\mu_A}\ \mathbb{E}\!\left[ \sum_{t=0}^{\infty} \gamma^{t}\, U_D \right].
+\mu_D^{*}  =  \arg\max_{\mu_D}\ \min_{\mu_A}\ \mathbb{E}\left[ \sum_{t=0}^{\infty} \gamma^{t}  U_D \right].
 $$
 
 **Proof.** For a discounted infinite-horizon stochastic game with finite state
@@ -164,7 +164,7 @@ fraction of the state space's entropy that the defender has previously
 characterized:
 
 $$
-P_d \;\le\; \frac{H(S_{\mathrm{known}})}{H(S_{\mathrm{known}}) + H(S_{\mathrm{unknown}})}.
+P_d  \le  \frac{H(S_{\mathrm{known}})}{H(S_{\mathrm{known}}) + H(S_{\mathrm{unknown}})}.
 $$
 
 **Sketch.** A detector trained on the known portion of the state space can
@@ -189,8 +189,8 @@ hunting rather than attempting to extend the known detector.
 minimax-optimal action is freeze:
 
 $$
-\mathrm{Novel}(s) > \theta \;\wedge\; T_{\mathrm{patch}} = \infty
-\;\Longrightarrow\; a^{*} = \mathrm{Freeze}.
+\mathrm{Novel}(s) > \theta  \wedge  T_{\mathrm{patch}} = \infty
+ \Longrightarrow  a^{*} = \mathrm{Freeze}.
 $$
 
 **Proof.** By Chapter 27, the patch time being infinite means the usual remedy
