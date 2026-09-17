@@ -63,17 +63,13 @@ $$
 Setting them equal and expanding,
 
 $$
-p  C_M(a) + C_{\neg M}(a) - p  C_{\neg M}(a)
- = 
-p  C_M(a') + C_{\neg M}(a') - p  C_{\neg M}(a').
+p  C_M(a) + C_{\neg M}(a) - p  C_{\neg M}(a) = p  C_M(a') + C_{\neg M}(a') - p  C_{\neg M}(a').
 $$
 
 Collecting the terms in $p$ on one side and the constants on the other,
 
 $$
-p\Bigl[ C_M(a) - C_{\neg M}(a) - C_M(a') + C_{\neg M}(a') \Bigr]
- = 
-C_{\neg M}(a') - C_{\neg M}(a).
+p\Bigl[ C_M(a) - C_{\neg M}(a) - C_M(a') + C_{\neg M}(a') \Bigr] = C_{\neg M}(a') - C_{\neg M}(a).
 $$
 
 The bracket simplifies to
